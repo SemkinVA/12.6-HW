@@ -27,38 +27,43 @@
 
 **Ответ:**
 
-Статус MySQL-server на master и slave:
+**Master** - 192.168.88.150 - sql-main
+
+**Salve**  - 192.168.88.151 - sql-slave
+
+
+1. Статус MySQL-server на master и slave:
 
 ![2-1-1](https://github.com/SemkinVA/12.6-HW/blob/main/2-1-1.png)
 ![2-1-2](https://github.com/SemkinVA/12.6-HW/blob/main/2-1-2.png)
 
-Файлы конфигурации на master и slave:
+2. Файлы конфигурации на master и slave:
 
 ![2-2-1](https://github.com/SemkinVA/12.6-HW/blob/main/2-2-1.png)
 ![2-2-2](https://github.com/SemkinVA/12.6-HW/blob/main/2-2-2.png)
 
-Создали на master пользователя **replic** и проверяем его привилегии. А так же проверяем состояние master:
+3. Создали на master пользователя **replic** и проверяем его привилегии. А так же проверяем состояние master:
 
 ![2-3-1](https://github.com/SemkinVA/12.6-HW/blob/main/2-3-1.png)
 
-Прописываем на slave, кто является master и откуда будут браться данные:
+4. Прописываем на slave, кто является master и откуда будут браться данные:
 
 ![2-3-2](https://github.com/SemkinVA/12.6-HW/blob/main/2-3-2.png)
 
-Командой *START SLAVE;* запускаем журнал регистрации и проверяем статус операции:
+5. Командой *"START SLAVE;"* запускаем журнал регистрации и проверяем статус операции:
 
 ![2-3-3](https://github.com/SemkinVA/12.6-HW/blob/main/2-3-3.png)
 
-Проверяем какие базы присутствуют на master и slave:
+6. Проверяем какие базы присутствуют на master и slave:
 
 ![2-4-1](https://github.com/SemkinVA/12.6-HW/blob/main/2-4-1.png)
 ![2-4-2](https://github.com/SemkinVA/12.6-HW/blob/main/2-4-2.png)
 
-Создаём на master новую базу :
+7. Создаём на master новую базу :
 
 ![2-5-1](https://github.com/SemkinVA/12.6-HW/blob/main/2-5-1.png)
 
-Проверяем появилась ли созданая база на slave:
+8. Проверяем появилась ли созданая база на slave:
 
 ![2-5-2](https://github.com/SemkinVA/12.6-HW/blob/main/2-5-2.png)
 
